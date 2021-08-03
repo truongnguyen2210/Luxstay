@@ -1,0 +1,97 @@
+*{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    color: #222;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+} 
+
+.app {
+    background-color: #fff;
+}
+
+$height-header: 78px;
+$color-main: #2b313b;
+$white-color: #fff;
+$gray-color: #666;
+$black-color: #222;
+
+
+// caption
+.heading-cap {
+    padding-top: 50px;
+    .heading-title.welcom {
+        font-size: 2.8rem;
+        color: $black-color;
+        font-weight: 700;
+    }
+    .heading-title {
+        font-size: 2.4rem;
+        color: $black-color;
+        font-weight: 700;
+    }
+    .heading-title-des {
+        font-size: 1.6rem;
+        color: $black-color;
+        margin: 0;
+        padding: 0;
+        line-height: 28px;
+    }
+}
+// carousel-scrollbar
+.carousel-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.carousel-scrollbar {
+    display: flex;
+    margin-top: 22px;
+    overflow-x: scroll;
+    .carousel-scrollbar-item:first-child {
+        margin-left: initial;
+    }
+    .carousel-scrollbar-item {
+        flex-shrink: 0;
+        margin-left: 16px;
+        overflow: hidden;
+    }
+}
+
+.carousel-scrollbar-wrap {
+    position: relative;
+}
+
+.carousel-scrollbar-control:hover {
+    color: rgb(238, 132, 113);
+    box-shadow: 0 0 5px rgba(238, 132, 113, 0.795);;
+}
+
+.carousel-scrollbar-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    font-size: 1.6rem;
+    box-shadow: 0 0 5px #f1f1f1;
+    transform: translateY(-50%);
+}
+.carousel-scrollbar-control.preview {
+    left: -28px;
+}
+.carousel-scrollbar-control.next {
+    right: -28px;
+}

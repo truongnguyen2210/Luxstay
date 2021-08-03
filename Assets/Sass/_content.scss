@@ -1,0 +1,212 @@
+// slider
+.contain__slider {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 120px;
+
+    img {
+        border-radius: 10px;
+        width: 100%;
+    }
+}
+
+// prominent-place-list
+.prominent-place-list {
+    
+   .prominent-place-item {
+        max-width: 247px;
+        height: 309px;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            user-select: none;
+        }
+    
+        .place-name-quanlity {
+            position: absolute;
+            bottom: 6px;
+            left: 11%;
+            color: $white-color;
+
+            .place-name {
+                font-size: 2.4rem;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: 1.6rem;
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.exclusive-offer-list {
+    margin-top: 22px;
+    .exclusive-offer-item {
+        width: 422px;
+        height: 184px;
+        border-radius: 4px;
+        a{
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+.apartment-list {
+    .apartment-item {
+        width: 313px;
+        height: 284px;
+        
+        overflow: hidden;
+        .apartment-item-link {
+            display: block;
+            text-decoration: none;
+            .apartment-img {
+                border-radius: 4px;
+                padding-top: 195px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            .apartment-body {
+                .apartment-heading {
+                    color: $gray-color;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    line-height: 33px;   
+                }
+                
+                .apartment-heading-sub:hover {
+                    color: rgb(201, 98, 80);
+                }
+
+                .apartment-heading-sub {
+                    color: #4b525f;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 24px;
+                    margin: 0;
+                }
+            }
+        }
+    } 
+    
+}
+
+.discovery-list {
+    .discovery-item {
+        position: relative;
+        width: 422px;
+        height: 264px;
+        border-radius: 4px;
+        background: linear-gradient(180deg, #eeeeee 0%, rgb(215, 214, 216) 50%, rgb(126, 125, 125) 100%);
+        .discovery-item-link {
+            display: block;
+            color: $white-color;
+            text-decoration: none;
+            .discovery-item-heading {
+                display: block;
+                position: absolute;
+                top: 8%;
+                left: 6%;
+                background-color: #bebebe;
+                font-size: 1.4rem;
+                font-weight: 600;
+                padding: 0 20px;
+                border-radius: 15px;
+                margin: 0;
+                line-height: 20px;
+                text-transform: uppercase;
+            }
+            
+            .discovery-item-title {
+                position: absolute;
+                bottom: 8%;
+                left: 6%;
+                font-size: 1.8rem;
+                font-weight: 700;
+                padding-right: 6%;
+            }
+        }
+    }
+}
+
+
+.user-manual-list {
+    .user-manual-item {
+        width: 248px;
+        height: 140px;
+        border-radius: 4px;
+        .user-manual-item-link {
+            .user-manual-item-img {
+                padding-top: 140px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }  
+    }
+}
+
+
+
+.introduction-luxstay {
+    margin-top: 62px;
+    .intro-luxstay-logo {
+        width: 348px;
+    }
+    
+    .intro-luxstay-heading {
+        font-weight: 700;
+        color: $black-color;
+        font-size: 2.8rem;
+        line-height: 60px;
+    }
+    
+    .intro-luxstay-des {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $black-color;
+    }
+    
+    .intro-luxstay-dow-app {
+        margin-top: 74px;
+        display: flex;
+        .intro-luxstay-dow-qr {
+            padding: 10px;
+            padding-bottom: 8px;
+            border: 1px solid #f1f1f1;
+            img {
+                width: 155px;
+                height: 155px;
+            }
+        }
+        
+        .intro-luxstay-dow-link {
+            img {
+                padding: 18px 0px;
+                margin-left: 36px;
+            }
+        }
+    }
+    
+    .intro-luxstay-app-mobile {
+        img {
+            width: 100%;
+        }
+    }
+    
+}

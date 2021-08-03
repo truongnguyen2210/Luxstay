@@ -1,0 +1,118 @@
+
+
+@import "./base";
+
+@import "./header";
+
+@import "./content";
+
+.footer__content {
+    padding: 60px 0;
+    .footer__content-heading {
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: $black-color;
+        text-transform: uppercase;
+    }
+    .footer__content-list {
+        padding-left: 0;
+        list-style: none;
+        .footer__content-item {
+            a:hover{
+                color: rgb(224, 89, 65);
+            }
+            a{
+                display: inline-block;
+                padding: 8px 0;
+                text-decoration: none;
+                font-size: 1.4rem;
+                color: $black-color;
+            }
+        }   
+    }
+}
+
+.footer__content-item {
+    .footer__content-contact {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        .footer__content-contact-icon {
+            font-size: 2.8rem;
+        }
+        
+        .footer__content-contact-adress {
+            margin-left: 6px;
+            .adress-title {
+                margin: 0;
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: $black-color;
+            }
+            
+            .adress-link {
+                margin: 0;
+                a:hover {
+                    color: rgb(224, 89, 65);
+                }
+                a{
+                    text-decoration: none;
+                    font-size: 1.4rem;
+                    color: $black-color; 
+                    padding: 0;
+                }
+            }
+        }
+    }  
+}
+
+
+.footer__content-dow {
+    margin-top: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    .footer__content-dow-qr {
+        span {
+            display: block;
+            border: 1px solid rgb(235, 231, 231);
+            padding: 10px;
+            img {
+                width: 65px;
+            }
+        }
+        
+    }
+    
+    .footer__content-link-app {
+        a{
+            margin-right: 20px;
+            margin-bottom: 20px;
+            display: block;
+            img {
+                width: 105px;
+                height: 31px;
+            }
+        }
+    }
+}
+
+
+
+.footer__copyright {
+    width: 100%;
+    padding: 28px 0;
+    background-color: #ffffff;
+    border-top: 1px solid rgb(212, 211, 211);
+    p {
+        
+        color:#8b8a8a;
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 0;
+        font-weight: 400;
+        line-height: 26px;
+    }
+}
+
