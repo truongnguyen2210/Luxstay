@@ -116,3 +116,76 @@
     }
 }
 
+@keyframes telephoneAnimate{
+    0%{
+        transform: scale(1.08);
+    }
+    100%{
+        transform: scale(1.4);
+    }
+}
+@keyframes shakeAnimate{
+    0%{
+        transform: rotateZ(-20deg);
+    }
+    50%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(20deg);
+    }
+}
+.telephone:hover  .telephone__scale{
+    background-color: rgba(241, 114, 91, 0.575);
+}
+.telephone:hover  .telephone__icon{
+    background-color: rgb(241, 114, 91);
+}
+.telephone {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+    bottom: 5%;
+    left: 3%;
+    .telephone__scale {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: rgba(156, 222, 252, 0.507);
+        transition: 0.3s;
+        animation: telephoneAnimate 1s linear infinite;
+        animation-direction: alternate;
+        // box-shadow: 0 0 5px rgba(156, 222, 252, 0.9);
+    }
+    
+    .telephone__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #56c9ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.2rem;
+        transition: 0.3s;
+        color: #fff;
+        i{
+            animation: shakeAnimate 0.2s ease-in-out infinite;
+            animation-direction: alternate;
+            transform-origin: center;
+        }
+    }
+}
+
+
+
+

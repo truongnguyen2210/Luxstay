@@ -56,6 +56,7 @@ $black-color: #222;
     display: flex;
     margin-top: 22px;
     overflow-x: scroll;
+    scroll-behavior: smooth;
     .carousel-scrollbar-item:first-child {
         margin-left: initial;
     }

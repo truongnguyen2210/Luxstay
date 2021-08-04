@@ -15,9 +15,37 @@
     padding: 2px 4%;
     box-shadow: 1px 1px rgb(240, 238, 238);
 }
+.header__logo:hover .border-spin{
+    border-bottom: 5px solid rgba(245, 119, 97, 0.966);
+    border-top: 5px solid rgba(245, 119, 97, 0.966);
+}
+.border-spin {
+    position: absolute;
+    top: 7%;
+    left: 5px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid rgb(189, 189, 189);
+    border-bottom: 5px solid #222;
+    border-top: 5px solid #222;
+    transition: all 0.5s;
+    animation: pinAnimation 1s linear infinite;
+}
+
+@keyframes pinAnimation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
 .header__logo-search {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
 
@@ -72,6 +100,7 @@
         }
 
         .header__search-day{
+            cursor: pointer;
             font-size: 1.4rem;
             font-weight: 600;
             color: $black-color;
@@ -93,7 +122,10 @@
             font-size: 1.4rem;
             font-weight: 600;
             color: $black-color;
-
+           
+            span{
+                cursor: pointer;
+            }
             i{
                 color: $gray-color;
                 padding-right: 4px;
@@ -108,6 +140,7 @@
             border-radius: 4px;
             background-color: $gray-color;
             margin-right: 4px;
+            cursor: pointer;
         }
 
     }

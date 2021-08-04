@@ -56,6 +56,7 @@ html {
   display: flex;
   margin-top: 22px;
   overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 
 .carousel-scrollbar .carousel-scrollbar-item:first-child {
@@ -135,10 +136,55 @@ html {
           box-shadow: 1px 1px #f0eeee;
 }
 
+.header__logo:hover .border-spin {
+  border-bottom: 5px solid rgba(245, 119, 97, 0.966);
+  border-top: 5px solid rgba(245, 119, 97, 0.966);
+}
+
+.border-spin {
+  position: absolute;
+  top: 7%;
+  left: 5px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid #bdbdbd;
+  border-bottom: 5px solid #222;
+  border-top: 5px solid #222;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: pinAnimation 1s linear infinite;
+          animation: pinAnimation 1s linear infinite;
+}
+
+@-webkit-keyframes pinAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes pinAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .header__logo-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -216,6 +262,7 @@ html {
 }
 
 .header__logo-search .header__search .header__search-day {
+  cursor: pointer;
   font-size: 1.4rem;
   font-weight: 600;
   color: #222;
@@ -244,6 +291,10 @@ html {
   color: #222;
 }
 
+.header__logo-search .header__search .header__search-cusnumber span {
+  cursor: pointer;
+}
+
 .header__logo-search .header__search .header__search-cusnumber i {
   color: #666;
   padding-right: 4px;
@@ -257,6 +308,7 @@ html {
   border-radius: 4px;
   background-color: #666;
   margin-right: 4px;
+  cursor: pointer;
 }
 
 .header__navbar .navbar-list {
@@ -756,4 +808,123 @@ html {
   margin: 0;
   font-weight: 400;
   line-height: 26px;
+}
+
+@-webkit-keyframes telephoneAnimate {
+  0% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  100% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+}
+
+@keyframes telephoneAnimate {
+  0% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  100% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+}
+
+@-webkit-keyframes shakeAnimate {
+  0% {
+    -webkit-transform: rotateZ(-20deg);
+            transform: rotateZ(-20deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
+  }
+}
+
+@keyframes shakeAnimate {
+  0% {
+    -webkit-transform: rotateZ(-20deg);
+            transform: rotateZ(-20deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
+  }
+}
+
+.telephone:hover .telephone__scale {
+  background-color: rgba(241, 114, 91, 0.575);
+}
+
+.telephone:hover .telephone__icon {
+  background-color: #f1725b;
+}
+
+.telephone {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  bottom: 5%;
+  left: 3%;
+}
+
+.telephone .telephone__scale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(156, 222, 252, 0.507);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: telephoneAnimate 1s linear infinite;
+          animation: telephoneAnimate 1s linear infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.telephone .telephone__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #56c9ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.telephone .telephone__icon i {
+  -webkit-animation: shakeAnimate 0.2s ease-in-out infinite;
+          animation: shakeAnimate 0.2s ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
