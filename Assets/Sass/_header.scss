@@ -150,6 +150,9 @@
     .navbar-list{
         display: flex;
         list-style: none;
+        .navbar-item:hover .navbar-item-link{
+            color: $hover-color;
+        }
         .navbar-item{
             padding-left: 34px;
             position: relative;
@@ -159,6 +162,7 @@
                 color: $black-color;
                 text-decoration: none;
                 display: inline-block;
+                transition: 0.3s;
             }
             .currency {
                 width: 100px;

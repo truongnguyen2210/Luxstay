@@ -6,6 +6,8 @@
 
 @import "./content";
 
+@import "./responsive";
+
 .footer__content {
     padding: 60px 0;
     .footer__content-heading {
@@ -118,7 +120,7 @@
 
 @keyframes telephoneAnimate{
     0%{
-        transform: scale(1.08);
+        transform: scale(1.1);
     }
     100%{
         transform: scale(1.4);
@@ -186,6 +188,66 @@
     }
 }
 
+.navbar-item--host {
+    position: relative;
+}
+.navbar-item--host::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: $hover-color;
+    position: absolute;
+    top: 0;
+    right: -24%;
+    border-radius: 50%;
+}
 
+// Mobile and Tablet
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet{
+       display: none!important;
+   }
+   .intro-luxstay-logo {
+       width: 262px!important;
+   }
+   .intro-luxstay-heading {
+       font-size: 2.0rem!important;
+   }
 
+}
+
+//Tablet 
+@media (max-width: 1023px) and (min-width: 740px) {
+
+   .hide-on-tablet{
+       display: none;
+   }
+}
+
+//Mobile
+@media (max-width: 739px) {
+   
+   .hide-on-mobile{
+       display: none!important;
+   }
+   .app {
+       margin: 0 6px;
+   }
+   .carousel-scrollbar-control{
+       display: none;
+   }
+   .footer__content {
+      padding: 32px 0;
+   }
+   .footer__content-contact {
+       width: 100%;
+     text-align: left;
+   }
+   .footer__content-dow {
+       justify-content: space-evenly;
+   }
+   .footer__copyright{
+       padding: 6px 0;
+   }
+}
 

@@ -318,6 +318,10 @@ html {
   list-style: none;
 }
 
+.header__navbar .navbar-list .navbar-item:hover .navbar-item-link {
+  color: #f65e39;
+}
+
 .header__navbar .navbar-list .navbar-item {
   padding-left: 34px;
   position: relative;
@@ -329,6 +333,8 @@ html {
   color: #222;
   text-decoration: none;
   display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .header__navbar .navbar-list .navbar-item .currency {
@@ -673,6 +679,7 @@ html {
 }
 
 .introduction-luxstay .intro-luxstay-dow-app .intro-luxstay-dow-qr {
+  display: block;
   padding: 10px;
   padding-bottom: 8px;
   border: 1px solid #f1f1f1;
@@ -812,8 +819,8 @@ html {
 
 @-webkit-keyframes telephoneAnimate {
   0% {
-    -webkit-transform: scale(1.08);
-            transform: scale(1.08);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   100% {
     -webkit-transform: scale(1.4);
@@ -823,8 +830,8 @@ html {
 
 @keyframes telephoneAnimate {
   0% {
-    -webkit-transform: scale(1.08);
-            transform: scale(1.08);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   100% {
     -webkit-transform: scale(1.4);
@@ -927,4 +934,64 @@ html {
           animation-direction: alternate;
   -webkit-transform-origin: center;
           transform-origin: center;
+}
+
+.navbar-item--host {
+  position: relative;
+}
+
+.navbar-item--host::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #f65e39;
+  position: absolute;
+  top: 0;
+  right: -24%;
+  border-radius: 50%;
+}
+
+@media (max-width: 1023px) {
+  .hide-on-mobile-tablet {
+    display: none !important;
+  }
+  .intro-luxstay-logo {
+    width: 262px !important;
+  }
+  .intro-luxstay-heading {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 740px) {
+  .hide-on-tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 739px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .app {
+    margin: 0 6px;
+  }
+  .carousel-scrollbar-control {
+    display: none;
+  }
+  .footer__content {
+    padding: 32px 0;
+  }
+  .footer__content-contact {
+    width: 100%;
+    text-align: left;
+  }
+  .footer__content-dow {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .footer__copyright {
+    padding: 6px 0;
+  }
 }
